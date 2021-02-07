@@ -1,2 +1,2 @@
 # SQL_Leetcode_explaination
-SQL training and explaination _ by LJ 
+SQL training and explaination of Leetcode _ by LJ 
