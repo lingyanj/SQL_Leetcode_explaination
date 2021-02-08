@@ -53,4 +53,15 @@ row_number() over(order by b desc) row_number,
 rank() over(order by b desc) rank,
 dense_rank() over(order by b desc) dense_rank 
 from employee;
-  );
+
+#Leetcode178
+select s1.Score,(select count(DISTINCT Score) from Scores as s2 where s2.Score>=s1.Score) as 'Rank'
+from Scores as s1 
+Order by Score DESC
+#RANK，用统计查询表中有多少不重复>=当前分数的个数，即为排名。通过计算字段子查询。
+
+#Leetcode180
+select distinct a.num as ConsecutiveNums
+from logs as a, logs as b, logs as c
+where a.id = b.id-1 and b.id = c.id-1 and a.num = b.num and b.num = c.num
+#主要是将一个表分为三个表，在ID变化时，看num是否相同，放在同一个where语句中，只要76ms
