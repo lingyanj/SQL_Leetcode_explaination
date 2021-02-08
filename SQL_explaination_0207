@@ -35,7 +35,7 @@ ISNULL(expr)，如果expr的值为null，则返回1，如果expr1的值不为nul
 SELECT ISNULL(NULL);        -- 输出结果：1
 SELECT ISNULL('HELLO');     -- 输出结果：0
 
-#177
+Leetcode#177
 CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
 BEGIN
   SET N=N-1;
